@@ -17,7 +17,7 @@ export default class Feed extends Component {
         }
     }
     async isAuthed() {
-        const API_URL = 'http://localhost:3002/account'; // Include the protocol
+        const API_URL = 'https://tsuback.vercel.app/account'; // Include the protocol
         try {
         const response = await fetch(API_URL, {
             method: 'GET',
@@ -60,7 +60,7 @@ export default class Feed extends Component {
       getUserPhoto = async () => {
         try {
           // Fetch the user's photo from the server using the /getPhoto endpoint
-          const response = await fetch('http://localhost:3002/uploaded', {
+          const response = await fetch('https://tsuback.vercel.app/uploaded', {
             method: 'GET',
             credentials: 'include',
             headers: {
@@ -121,7 +121,7 @@ export default class Feed extends Component {
       async getUserInfo() {
         try {
           // Fetch the user's photo from the server using the /getPhoto endpoint
-          const response = await fetch('http://localhost:3002/profile', {
+          const response = await fetch('https://tsuback.vercel.app/profile', {
             method: 'GET',
             credentials: 'include',
           });
@@ -146,7 +146,7 @@ export default class Feed extends Component {
 
       getPosts= async() => {
         try {
-            const response = await fetch('http://localhost:3002/posted', {
+            const response = await fetch('https://tsuback.vercel.app/posted', {
                 method: 'GET',
                 credentials: 'include',
             })
