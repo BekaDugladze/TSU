@@ -53,7 +53,7 @@ class LogIn extends Component {
      handleLoginForm= async (e) => {
         e.preventDefault();
         const {password, personalN} = this.state;
-        const API_URL = 'http://localhost:3002/login'; 
+        const API_URL = 'https://tsuback.vercel.app/login'; 
 
         try{
             const loginResponse = await fetch(API_URL, {
