@@ -18,7 +18,7 @@ import { useSelector } from "react-redux";
     }
   
     async isAuthed() {
-      const API_URL = 'http://localhost:3002/account';
+      const API_URL = 'https://tsuback.vercel.app/account';
       try {
         const response = await fetch(API_URL, {
           method: 'GET',
