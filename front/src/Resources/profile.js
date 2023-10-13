@@ -30,7 +30,7 @@ class Profile extends Component{
 
       submitPhoto= async (e) => {
         e.preventDefault();
-        const API = 'http://localhost:3002/upload';
+        const API = 'https://tsuback.vercel.app/upload';
         const formData = new FormData();
         formData.append('photo', this.state.selectedFile);
       
@@ -64,7 +64,7 @@ class Profile extends Component{
   getUserPhoto = async () => {
     try {
       // Fetch the user's photo from the server using the /getPhoto endpoint
-      const response = await fetch('http://localhost:3002/uploaded', {
+      const response = await fetch('https://tsuback.vercel.app/uploaded', {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -90,7 +90,7 @@ class Profile extends Component{
     async getUserInfo() {
       try {
         // Fetch the user's photo from the server using the /getPhoto endpoint
-        const response = await fetch('http://localhost:3002/profile', {
+        const response = await fetch('https://tsuback.vercel.app/profile', {
           method: 'GET',
           credentials: 'include',
         });
