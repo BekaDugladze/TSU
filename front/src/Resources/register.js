@@ -88,7 +88,7 @@ class Register extends Component {
       handleRegistration = async (e) => {
         e.preventDefault();
         const { name, lastName, password, email, value } = this.state;
-        const API_URL = 'http://localhost:3002'; 
+        const API_URL = 'https://tsuback.vercel.app/'; 
     
         try {
           // Step 1: Register the user
