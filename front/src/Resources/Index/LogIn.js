@@ -77,7 +77,7 @@ class LogIn extends Component {
             
         }
         catch(err) {
-            alert('Login failed: ' + err.message);
+            console.log('Login failed: ' + err.message);
             console.log(err);
         }
       }
