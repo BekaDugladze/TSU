@@ -35,7 +35,7 @@ import { useSelector } from "react-redux";
         this.setState({ loading: false });
       } catch (err) {
         console.log(err);
-        alert(err.message);
+        console.log(err.message);
         this.setState({ loading: false });
       }
     }
