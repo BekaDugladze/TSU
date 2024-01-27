@@ -34,7 +34,6 @@ async isAuthed() {
     }
   } catch (err) {
     console.log(err);
-    alert(err.message);
   }
 }
 async componentDidMount() {
