@@ -33,7 +33,6 @@ export default class Feed extends Component {
         }
         } catch (err) {
         console.log(err);
-        alert(err.message);
         }
     }
   
@@ -107,7 +106,7 @@ export default class Feed extends Component {
           });
       
           if (!response.ok) {
-            alert('Error');
+            console.log('Error');
           } else {
             console.log('success');
           }
@@ -135,11 +134,10 @@ export default class Feed extends Component {
               personalN: data.personaln
             } );
           } else {
-            alert('Error fetching user in else photo');
+            console.log('Error fetching user in else photo');
           }
         } catch (error) {
           console.log(error);
-          alert('Error fetching user photo')
         }
       };
 
@@ -150,9 +148,6 @@ export default class Feed extends Component {
                 method: 'GET',
                 credentials: 'include',
             })
-            if (!response.ok){
-                alert('Error fetching');
-            }
             const data = await response.json();
             this.setState({
               post: data.data,
@@ -161,7 +156,6 @@ export default class Feed extends Component {
         }
         catch (error) {
             console.log(error);
-            alert(error)
         }
       }
     render() {
