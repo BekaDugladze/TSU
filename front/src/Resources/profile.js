@@ -45,13 +45,13 @@ class Profile extends Component{
             console.log('success')
           } else if (response.status === 400) {
             const data = await response.json();
-            alert(data.message); // Display the error message from the server
+            console.log(data.message); // Display the error message from the server
           } else {
-            alert('Error'); // Handle other error cases
+            console.log('Error'); // Handle other error cases
           }
         } catch (err) {
           console.log(err);
-          alert(err.message);
+          console.log(err.message);
         }
       }
 
@@ -104,11 +104,11 @@ class Profile extends Component{
             personalN: data.personaln
           } );
         } else {
-          alert('Error fetching user in else photo');
+          console.log('Error fetching user in else photo');
         }
       } catch (error) {
         console.log(error);
-        alert('Error fetching user photo')
+        console.log('Error fetching user photo')
       }
     };
     handleTabClick = (tab) => {
