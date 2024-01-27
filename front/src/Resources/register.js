@@ -107,7 +107,7 @@ class Register extends Component {
           });
     
           if (!registrationResponse.ok) {
-            alert('email or personalN is used');
+            console.log('email or personalN is used');
           }
           else{
             this.setState({ registrationResponse: 'Congrats! You are now registered! Now Log In' });
@@ -115,7 +115,7 @@ class Register extends Component {
           }
 
         } catch (error) {
-          alert('Error registering:', error.message);
+          console.log('Error registering:', error.message);
           console.log(error);
         }
       };
